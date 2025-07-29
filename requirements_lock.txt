@@ -56,7 +56,7 @@ jsonref==1.1.0
 jsonschema==4.24.0
 jsonschema-specifications==2025.4.1
 langchain==0.3.26
-langchain-community==0.0.30
+langchain-community>=0.0.30
 langchain-core==0.3.68
 langchain-openai==0.3.28
 langchain-text-splitters==0.3.8
