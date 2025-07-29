@@ -25,12 +25,8 @@ st.write('Enter your question related to the course:')
 st.divider()
 
 os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
-
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 # 1. API key
-def _set_env(key: str):
-    os.environ['OPENAI_API_KEY'] = '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'
-
-_set_env("OPENAI_API_KEY")
 
 from langchain.chat_models import init_chat_model
 llm = init_chat_model("openai:gpt-4.1", temperature=0)
