@@ -28,7 +28,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
 
 # 1. API key
 def _set_env(key: str):
-    os.environ['OPENAI_API_KEY'] = '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'
+    os.environ['OPENAI_API_KEY'] = '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'
 
 _set_env("OPENAI_API_KEY")
 
