@@ -38,7 +38,8 @@ llm = init_chat_model("openai:gpt-4.1", temperature=0)
 # 2. read the pdf
 # exist pdf
 import os
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+project_root = os.path.dirname(os.path.abspath(__file__))
+# project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_dir = project_root
 pdf_library = {
     "chapter1": os.path.join(data_dir, "chapter1.docx"),
