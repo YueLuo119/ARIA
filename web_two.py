@@ -57,17 +57,15 @@ with col2:
     st.divider()
 
     os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
-    # 1. API key
-    def _set_env(key: str):
-        os.environ['OPENAI_API_KEY'] = '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'
 
-    _set_env("OPENAI_API_KEY")
   
     llm = init_chat_model("openai:gpt-4.1", temperature=0)
 
     # 2. read the pdf
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    project_root = os.path.dirname(os.path.abspath(__file__))
     data_dir = project_root # Assuming docx files are in the parent directory of the script's directory
     pdf_library = {
         "chapter1": os.path.join(data_dir, "chapter1.docx"),
@@ -323,4 +321,5 @@ with col_right:
     st.markdown("</div>", unsafe_allow_html=True)
 
     #selected_chapter = st.radio("Chapters", list(pdf_library.keys()))
+
     #st.write(f"You have selected: **{selected_chapter}**")
